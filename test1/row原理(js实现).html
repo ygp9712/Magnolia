@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .container {
+            height: 40px;
+            margin: 0 auto;
+            background-color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        231
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            //1.获取常量
+            let container = document.querySelector(".container");
+            let clientW = 0;
+
+            function resize() {
+                //2.1获取改变后的宽度
+                clientW = window.innerWidth;
+
+                //2.2判断
+                if (clientW >= 1200) { //超大屏幕
+                    container.style.width = "1170px";
+                } else if (clientW >= 992) { //大屏幕
+                    container.style.width = "970px";
+                } else if (clientW >= 768) { //中屏幕
+                    container.style.width = "750px"
+                } else { //小屏幕
+                    container.style.width = "100%"
+                }
+            }
+            resize();
+            //2.监听窗口的大小变化
+            window.addEventListener("resize", resize());
+
+        })
+    </script>
+</body>
+
+</html>

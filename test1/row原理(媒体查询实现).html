@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .container {
+            height: 40px;
+            margin: 0 auto;
+            background-color: red;
+        }
+        /*媒体查询*/
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .hidden-xs {
+                display: none;
+            }
+            .visible-lg {
+                display: none;
+            }
+        }
+        /* 超小屏幕 */
+        
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .container {
+                width: 750px;
+            }
+            .visible-lg {
+                display: none;
+            }
+        }
+        /*  小屏幕 */
+        
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .container {
+                width: 970px;
+            }
+            .visible-lg {
+                display: none;
+            }
+        }
+        /*  中屏幕 */
+        
+        @media screen and (min-width:1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+        /* 大屏幕 */
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="hidden-xs">在超小屏幕下看不到这段文字</p>
+        <p class="visible-lg">只有在大屏幕下才看得到这段文字</p>
+    </div>
+    <script>
+        alert("sdl wsl");
+    </script>
+
+</body>
+
+</html>
